@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HabitFlow</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="appShell">
+      <header class="appHeader">
+        <a class="brand" href="#" data-route="today">
+          HabitFlow
+        </a>
+
+        <nav class="appNav">
+          <ul class="navList">
+            <li>
+              <button type="button" id="nav-today" data-route="today">
+                Today
+              </button>
+            </li>
+            <li>
+              <button type="button" id="nav-habits" data-route="habits">
+                Habits
+              </button>
+            </li>
+            <li>
+              <button type="button" id="nav-calendar" data-route="calendar">
+                Calendar
+              </button>
+            </li>
+            <li>
+              <button type="button" id="nav-insights" data-route="insights">
+                Insights
+              </button>
+            </li>
+            <li>
+              <button type="button" id="nav-settings" data-route="settings">
+                Settings
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="headerActions">
+          <button
+            type="button"
+            id="btn-add-habit"
+          >
+            + Add Habit
+          </button>
+        </div>
+      </header>
+
+      <div id="toast-root"></div>
+      <div id="modal-root"></div>
+
+      <main id="app">
+        <header id="sectionHeader">
+          <h1>Today</h1>
+          <time id="today-date"></time>
+        </header>
+
+        <section>
+          <h2 id="due-today-title">Due Today</h2>
+
+          <ul id="due-list"></ul>
+
+          <div id="due-empty" hidden>Nothing due today</div>
+        </section>
+
+        <div id="undo-bar" hidden></div>
+      </main>
+
+      <footer class="appFooter">
+        <span>HabitFlow V1</span>
+        <span class="footerCredits">Credits</span>
+      </footer>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
