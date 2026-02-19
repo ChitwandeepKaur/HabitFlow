@@ -1,4 +1,4 @@
-import { initialState } from "./state/initialState.js";
+import { getState } from "./store/store.js";
 import {renderToday} from './views/todayView.js';
 import {getTodayISO, formatPretttyDate} from './domain/date.js';
 
@@ -7,4 +7,4 @@ const isoDate = getTodayISO();
 todayDateEl.textContent = formatPretttyDate(isoDate);
 
 
-renderToday(initialState, isoDate);
+renderToday(getState(), isoDate);

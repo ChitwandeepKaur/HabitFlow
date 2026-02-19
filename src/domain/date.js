@@ -1,7 +1,11 @@
-export function getTodayISO () {
-    const today = new Date(); // Get today's date
-    return today.toISOString().split('T')[0]; // Convert to ISO format which is something like this - 2026-02-18T23:11:05.641Z and extract the date part by splitting at 'T' and taking the first part
+export function getTodayISO() {
+  const now = new Date();
+  const y = now.getFullYear();
+  const m = String(now.getMonth() + 1).padStart(2, "0");
+  const d = String(now.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`; // local YYYY-MM-DD
 }
+
 
 export function formatPretttyDate(iso) {
   const [y, m, d] = iso.split("-").map(Number);
